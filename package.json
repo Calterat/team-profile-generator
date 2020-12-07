@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Calterat/team-profile-generator.git"
+  },
+  "author": "Calterat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Calterat/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/Calterat/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
