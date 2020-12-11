@@ -10,7 +10,7 @@ test("Create an Engineer", () => {
 
 test("Create an Engineer", () => {
     const engineer = new Engineer('sarah', 123, 'sarah@test.com', 'sarahGit');
-    expect(engineer.github).toBe('sarahGit');
+    expect(engineer.getGithub()).toBe('sarahGit');
 });
 
 test("Create an Engineer", () => {
