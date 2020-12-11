@@ -3,7 +3,7 @@ const prompt = new Prompt();
 
 let teamMember = [];
 
-prompt.start();
+prompt.start(manager);
 
 let basic = teamMember.push(prompt.basicInfo()
 
