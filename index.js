@@ -1,32 +1,20 @@
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
+const writeHTML = require('./lib/page-template');
 
-const teamMember = [];
-let teamCount = 1;
+const team = [];
 
-// const newMember = (role) => {
-//     let member = {};
-//     if (!role) {
-//         member.role = 'Manager';
-//     } else {
-//         member.role = role;
-//     }
-//     console.log(member);
-//     promptForTeam(member);
-// }
-
-const promptForTeam = () => {
+const prompt = _ => {
     return inquirer.prompt([
+        {
+            type: 'list',
+            name: 'role',
+            message: 'What role would you like to add to your team?',
+            choices: ['Manager', 'Engineer', 'Intern', 'Employee']
+        },
         {
             type: "input",
             name: "name",
-            message: "Input Name Here: ",
-            when: (teamCount) => {
-                if (teamCount ===1) return false;
-                else return true;
-            }
+            message: "Input Name Here: "
         },
         {
             type: 'input',
@@ -41,7 +29,7 @@ const promptForTeam = () => {
         {
             type: 'input',
             name: 'officeNumber',
-            message: 'Input Office Numer Here: ',
+            message: 'Input Office Number Here: ',
             when: ({ role }) => {
                 if (role === 'Manager') return true;
                 return false;
@@ -66,18 +54,16 @@ const promptForTeam = () => {
             }
         },
         {
-            type: 'list',
-            name: 'choice',
-            message: 'Who would you like to add another to your team?',
-            choices: ['Engineer', 'Intern', 'Employee', 'NO']
+            type: 'confirm',
+            name: 'newMember',
+            message: 'Would you like to add another person to the team?',
+            default: false
         }
     ])
-    .then(newMember => {
-        teamMember.push(newMember);
-        if (newMember.choice === 'NO') return newMember;
-        else promptForTeam();
+    .then(teamMember => {
+        team.push(teamMember);
+        if (teamMember.newMember) prompt();
     })
 }
 
-promptForTeam();
-
+prompt().then(data => writeHTML(team));
