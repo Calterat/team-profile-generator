@@ -11,9 +11,5 @@ prompt()
         toClasses(team))
     .then(team => 
         writeHTML(team))
+    .then(data => console.log(data))
     .catch(err => console.log(err));
-    // .then(team => 
-    //     console.log(team));
-    // .then(team => 
-    //     writeHTML(team))
-    // .then(HTML => console.log(HTML));
