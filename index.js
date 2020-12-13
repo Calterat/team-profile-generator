@@ -8,5 +8,7 @@ prompt()
         toClasses(team))
     .then(team => 
         writeHTML(team))
-    .then(data => writeFile(data))
-    .catch(err => console.log(err));
+    .then(data => 
+        writeFile(data))
+    .catch(err => 
+        console.log(err));
