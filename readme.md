@@ -67,8 +67,7 @@ This project is covered under the license of [MIT License](https://GitHub.com/Ca
 
 You can find my repository URL [Here](https://GitHub.com/Calterat)
 
-
-         Here is the link to the site URL: www.mypage.com
+* Here is the [link](https://calterat.github.io/team-profile-generator/) to an example site this app generates.
          
 
 If you have additional questions, you may reach me at my E-mail Address: calterat@gmail.com
@@ -77,5 +76,5 @@ If you have additional questions, you may reach me at my E-mail Address: caltera
 
 ## Comments
 
-> This README is created by another one of my apps! Check it out at https://github.com/Calterat/readme-generator!
+> This README is created by another one of my apps! Check it out at [Here](https://github.com/Calterat/readme-generator!)
 
