@@ -41,7 +41,7 @@ HTML,CSS,JavaScript
 
 > Use this app if you want to quickly generate an html page with all your team separated into cards with quick links.
 
-* [Here is a HowTo Video Link!](www.google.com/video)
+* [Here is a HowTo Video Link!](https://drive.google.com/file/d/1zJ_nCtthZUxaIDkOowaxdYKweLJE3J_0/view)
 
 
 
