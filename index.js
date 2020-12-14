@@ -16,6 +16,9 @@ manager()
     // This take the frashly written HTML and writes the file to the local 'dist' folder
     .then(data => 
         writeFile(data))
+    .then(writeFileResponse => {
+        console.log(writeFileResponse.message)
+    })
     // cataches any errors thrown from the the promise chain
     .catch(err => 
         console.log(err));
